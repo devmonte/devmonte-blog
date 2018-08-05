@@ -1,0 +1,42 @@
+@inherits BlazorLayoutComponent
+<div>
+    <nav class="navbar navbar-expand-lg navbar-dark  test">
+        <a class="navbar-brand test" href="">grzegorz jonca</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarnav" aria-controls="navbarnav" aria-expanded="false" aria-label="toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse test">
+            <ul class="navbar-nav ml-auto mr-5">
+                <li class="nav-item ml-3 mr-3 ">
+                    <a class="nav-link" href="">About</a>
+                </li>
+                <li class="nav-item ml-3 mr-3">
+                    <a class="nav-link" href="projects">Projects</a>
+                </li>
+                <li class="nav-item ml-3 mr-5">
+                    <a class="nav-link" href="https://github.com/devmonte">GitHub</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="content">
+    @Body
+</div>
+
+<div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-copyright text-center">
+                <i class="fas fa-copyright"></i>
+                2018 Created with
+                <i class="fas fa-heart"></i>
+                using
+                <a href="https://blazor.net/">Blazor</a>
+            </div>
+        </div>
+    </footer>
+</div>
+
+
