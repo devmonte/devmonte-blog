@@ -1,2 +1,33 @@
 ﻿@page "/"
-<h1> Welcome Page</h1>
+@using System.Data.SqlTypes
+<div class="container">
+    <div class="text-center">
+        <img class="myface m-3 mt-5" src="img/face.jpg" height="200" style="border-radius: 50%" />
+        <p class="mt-2">Hello! My name is Grzegorz and I'am <b>@Profession</b></p>
+        <p>I work as a professional software developer.</p>
+        <p>I currently live in Bydgoszcz</p>
+        <p>I love mountains!</p>
+    </div>
+</div>
+
+@code
+{
+    public string Profession { get; set; } = "Mountaineer";
+    public string TestValue { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        var professions = new string[] { "Developer", "Speaker", "Trainer", "Climber", "Runner", "Mountaineer" };
+        int index = 0;
+        do
+        {
+            Profession = professions[index];
+            index++;
+            if (index == professions.Length - 1)
+                index = 0;
+            await Task.Delay(2000);
+            this.StateHasChanged();
+        } while (true);
+    }
+
+}
+
