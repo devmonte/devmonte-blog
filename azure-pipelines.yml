@@ -46,4 +46,4 @@ steps:
     Destination: 'AzureBlob'
     storage: 'devmonte'
     ContainerName: '$web'
-    AdditionalArgumentsForBlobCopy: 'recursive'
+    AdditionalArgumentsForBlobCopy: '--recursive=true'
