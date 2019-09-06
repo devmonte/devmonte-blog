@@ -41,7 +41,7 @@ steps:
 
 - task: AzureFileCopy@3
   inputs:
-    SourcePath: 'd:\a\1\s\DevMonte\bin\Debug\netstandard2.0\publish\DevMonte\dist'
+    SourcePath: 'd:\a\1\s\src\DevMonte\bin\Debug\netstandard2.0\publish\DevMonte\dist'
     azureSubscription: 'cebula(4f599dfb-9973-4fcc-a1aa-0d8305b0be13)'
     Destination: 'AzureBlob'
     storage: 'devmonte'
