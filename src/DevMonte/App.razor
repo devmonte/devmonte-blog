@@ -1,10 +1,15 @@
-﻿<Router AppAssembly="typeof(Program).Assembly">
-    <NotFoundContent>
-        <div class="container">
-            <div class="row">
-                <div class="col-12 align-self-center align-content-center text-center"></div>
-                <img  class="pt-5" src="img/notfound.gif"/>
+﻿<Router AppAssembly="@typeof(Program).Assembly">
+    <Found Context="routeData">
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+    </Found>
+    <NotFound>
+        <LayoutView Layout="@typeof(MainLayout)">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 align-self-center align-content-center text-center"></div>
+                    <img class="pt-5" src="img/notfound.gif" />
+                </div>
             </div>
-        </div>
-    </NotFoundContent>
+        </LayoutView>
+    </NotFound>
 </Router>
